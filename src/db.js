@@ -1,12 +1,12 @@
 import pkg from "pg";
-import dotenv from "dotenv";
-
-dotenv.config();
-
 const { Pool } = pkg;
 
 export const pool = new Pool({
-  connectionString: process.env.DATABASE_URL,
+  user: "shoppingcart_db_user",
+  host: "dpg-d6kjbmd6ubrc73ehf92g-a.oregon-postgres.render.com",
+  database: "shoppingcart_db",
+  password: "foZ32pLQWCDvZmTFZ7XWJFXFPpSfWDTs",
+  port: 5432,
   ssl: {
     rejectUnauthorized: false
   }
