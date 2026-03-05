@@ -27,7 +27,7 @@ export const registerUser = async (req, res) => {
 
     res.status(201).json({ message: "User registered successfully",status:true });
   } catch (err) {
-    console.error(err);
+    console.error("Register Error:", err.message);
     res.status(500).json({ message: "Server error",status:false });
   }
 };
@@ -63,7 +63,7 @@ export const loginUser = async (req, res) => {
       email: user.email,
     });
   } catch (err) {
-    console.error(err);
+    console.error("Register Error:", err.message);
     res.status(500).json({ message: "Server error", status: false });
   }
 };
